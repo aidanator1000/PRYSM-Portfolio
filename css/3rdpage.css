@@ -1,0 +1,41 @@
+.spinning-face{
+    animation-name: spin-face;
+    animation-duration: 1.7s;
+width: 30vw;
+min-width: 20vmin;
+    animation-iteration-count: infinite;
+animation-timing-function: linear;
+    transform-origin: center center;
+    transform-origin: 60% 60%;
+}
+
+@keyframes spin-face {
+    0% {rotate: 0deg;}
+    0% {rotate: 360deg;}
+}
+
+.rainbow-gradient2{
+    position: relative;
+    overflow: visible;
+}
+.rainbow-gradient2::before {
+    opacity: 0%;
+    content: "";
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: linear-gradient(150deg,  #db6980 0%, #dbad69 25%, #8ed882 50%, #69dbd7 75%, #86a1cf  90%);
+    filter: blur(20px);
+    z-index: 0;
+    transition: opacity 0.3s;
+}
+.rainbow-gradient2:hover:before {
+opacity: 100%;
+}
+
+.gallery-container {
+    width: 100%; max-width: 700px; background: linear-gradient(180deg, #7fadfe 0%, #fc466b 100%); min-width: 250px; border-radius: 25px;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/gallery.css">
+    <link rel="stylesheet" type="text/css" href="css/hellnavigation.css">
+    <link rel="stylesheet" type="text/css" href="css/flexbox.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/grids2.css">
+    <link rel="stylesheet" type="text/css" href="css/image_viewer.css">
+    <link rel="stylesheet" type="text/css" href="css/grid_home_p2.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/slideshow.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/fill.css">
+    <link rel="stylesheet" type="text/css" href="css/overlay.css">
+    <!-- Favicon -->
+    <link rel="Icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- AOS integration -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- FONT INTERGRATION -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Readex+Pro:wght@160..700&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  
+    <title>Card Packs</title>
+
+</head>
+
+<body>
+
+    <header style="z-index: 100;">
+        <nav>
+            <nav>
+                <a href="index.html" class="skip round-left color-fnaf1">PRYSM</a>
+                <a href="card-open.html" class="skip">CARD PACKS</a>
+                <a href="gallery.html" class="skip round-right">GALLERY</a>
+            </nav>
+        </nav>
+    </header>
+
+    <div class="fill-bg"
+        style=" height: 100vh; z-index: -1000; position: fixed; top: 0px; background-image: linear-gradient(150deg, rgb(208, 0, 255) 30%, rgb(110, 0, 220) 100%);">
+        <img src="" alt="hey, look! No image this time!." class="">
+    </div>
+    <div class="fill-bg bg_adj"
+        style=" height: 100vh; z-index: -900; position: fixed; top: 0px; background-image: linear-gradient(150deg,  #db6980 0%, #dbad69 25%, #8ed882 50%, #69dbd7 75%, #86a1cf  90%);"
+        id="changingBG">
+        <img src="" alt="hey, look! No image this time!." class="">
+    </div>
+    <div class="fill-bg bg_adj"
+        style=" height: 100vh; z-index: -800; position: fixed; top: 0px; background-image:linear-gradient(180deg, #7fadfe 0%, #fc466b 100%);"
+        id="changingBG2">
+        <img src="" alt="hey, look! No image this time!." class="">
+    </div>
+
+        <!-- PUT ALL CONTENT IN HERE -->
+         <div class="flex-container" style="position: relative; justify-self: center; top: 5vh;">
+        <div class="row flex-center flex-space-small remove-overflow">
+            <div class="fill-full remove-overflow hover-grow" style="" onclick="oncreative()" onmouseover="bgcreative()" onmouseout="bgleavecreative()" id="opencreative">
+                <img src="images/cardpack/pack_creative1.png" alt="A booster pack titled Creative Series that features various cards of my 3D models made for personal enjoyment" class="remove-overflow shadow">
+            </div>
+            <div class="fill-full remove-overflow hover-grow" style="" onclick="onimd()" onmouseover="bgimd()" onmouseout="bgleaveimd()" id="openimd">
+                <img src="images/cardpack/pack_imd1.png" alt="A booster pack titled IMD Series that features various cards of my 3D models made for the IMD program." class="remove-overflow shadow">
+            </div>
+        </div>
+    </div>
+
+
+    <div id="overlay" onclick="" class="flex-container">
+        <!-- A Row, hidden at first until clicking on an appropriate button -->
+        <div class="row flex-center flex-space" style="height: 100%;" id="booster-container"> <!--A Row, meant to act as a container for content-->
+            <div class="centered2 shadow booster-packet-style fill-full" style="" id="pack" onclick="openpacket()">
+                <img src="images/cardpack/pack_creative1.png" alt="A booster pack that features various cards of my 3D models" style="pointer-events: none;" id="booster-pack-wrapper">
+            </div>
+        </div>
+
+        <div class="row flex-center flex-space" style="height: 100%;" id="theresultingcard"> 
+            <div class="centered2 shadow trading-card-style fill-full" style="" id="pack2" onclick="">
+                <img src="images/creative_series/full/nightmare_full.jpg" alt="The alt is to the Right!" style="pointer-events: none;" class="" id="thecarditself">
+            </div>
+            <div class="card-desc-adj shadow2" style="word-wrap: break-word; width: 25%; background-color: rgba(0, 0, 0, 0.436); border: 15px solid rgba(0, 0, 0, 0.112); border-radius: 10px;">
+                <p class="card-text-title shadow2" style="" id="title">Title Filler</p>
+                <p class="card-text-cred shadow2" id="credits">Character Credits:</p>
+                <p class="card-text shadow2" style="" id="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, perferendis quod nostrum adipisci nam ducimus voluptatem sit optio. Voluptates cum consequatur soluta architecto non, error tempore officia doloribus consequuntur optio?</p>
+            </div>
+        </div>
+
+        <!-- A test button, for the sake of eh -->
+        <!-- <div class="row flex-center" style="position: absolute; bottom: 10%;">
+            <button onclick="on()" class="">test here!</button>
+        </div> -->
+
+        <!-- The x button to turn the dang thingy off -->
+        <p onclick="off()" style="position: absolute; top: 10%; right: 10%; padding: 20px; 
+        content: 'x';
+        color: #fff;
+        font-size: 50px;
+        font-weight: 300;
+        font-family: Arial, sans-serif;">x</p>
+    </div>
+
+    <!-- <button style="margin: auto;" onclick="oncreative()" class="">test here!</button> -->
+
+    <script src="javascript/gallery.js"></script>
+    <script src="javascript/overlay.js"></script>
+    <!-- <script src="javascript/typewriter.js"></script> -->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("demo");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+</body>
+
+</html>

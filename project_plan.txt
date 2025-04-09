@@ -1,0 +1,21 @@
+https://printninja.com/printing-resource-center/printing-options/custom-game-printing/packaging-options/booster-pack/
+
+Oh yeah, you heard that right, booster packs! 
+To creatively showcase my work, I'll make it a fun experience collecting cards of my various characters! There's gonna be different rarities, hopefully a display case, and more!
+
+the interface:
+SO, the page loads with 3 packs to select. They are in the appearance of a carousel, and you can rotate it to interact with different card packs. Once you have your desired series selected, press the open button for an overlay to appear with your card zooming in with a bit of animation. Press on it 3 times, and BAM! opens up to showcase a nice div with a white border, a background, and an image of a character inside with a description. There should be, I feel, either 5 or 8 cards to find in each series, with 2 full art, 2 legendary's, 2 rare, and 2 common. Other contenders for rarity titles are exotic, mythical, epic, and uncommon, However, there is likely not enough content for this
+
+BIT OF A STRETCH, but collected cards should be viewable in a gallery, but that would be a lot of work, wouldn't it? Maybe thats the third page, but idk to be honest
+
+Either way, the PLAN of action!
+
+Design card pack images using references from various media and photoshop
+
+Make a button that animates the cards position and size to give it the spinny effect
+
+This button will also change a number variable that activates a different opening function in the javascript file
+
+an open button that on click triggers an opening, which will use the variable to choose which pack is being opened
+
+Implement overlay to make the effect work smoothly: https://www.w3schools.com/howto/howto_css_overlay.asp

@@ -1,0 +1,266 @@
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 1000; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    user-select: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  .centered {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 20vh;
+    text-align: center;
+  }
+
+  .centered2 {
+    position: relative;
+align-self: center;
+justify-self: center;
+  }
+
+  .trading-card-style{
+    border-style: solid;
+    border-color: #ffd25600;
+    border-width: 20px;
+    border-radius: 15px;
+    background-color: rgba(127, 174, 254, 0);
+    width: 25%;
+    height: 65%;
+    /* Use viewport width to shrink card instead */
+    width: 25vw;
+    height: 35vw;
+    min-width: 40vmin;
+    min-height: 56vmin;
+  }
+
+  .booster-packet-style{
+    width: 25%;
+    height: 65%;
+    /* Use viewport width to shrink card instead */
+    width: 25vw;
+    height: 35vw;
+    transition: width 0.5s, height 0.5s;
+    transition-timing-function: ease-out;
+  }
+
+  .hover-grow{
+    max-width: 50vmin;
+    transform-origin: 50% 50%;
+    transition: max-width 0.3s;
+    transition-timing-function: ease-out;
+  }
+  .hover-grow:hover{
+    /* animation-name: grow;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    transform-origin: center center;
+    transform-origin: 50% 50%; */
+    max-width: 60vmin;
+  }
+
+  .card_container{
+    display: none; /*hidden by default*/
+  }
+
+  .card-text-cred{
+    font-size: calc(2.2vw + 5px) ; padding-bottom: 10px; text-align: left;
+  }
+  .card-text-title{
+    font-size: calc(10px + 3.6vw); padding-bottom: 10px; text-align: left;
+  }
+  .card-text{
+    font-size: calc(10px + 0.8vw); padding-bottom: 10px; text-align: left;
+  }
+
+  .card-desc-adj {
+    min-width: 0vmin;
+  }
+
+  .centered2 img{
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .shadow {
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.449));
+  }
+
+  .shadow2 {
+    filter: drop-shadow(4px 3px 2px rgba(0, 0, 0, 0.300));
+  }
+
+  .popup{
+    animation-name: popup;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    transform-origin: center center;
+    transform-origin: 50% 50%;
+}
+
+.mute{
+    pointer-events: none;
+}
+    .popup2{
+        animation-name: popup;
+        animation-duration: 0.4s;
+        animation-delay: 0.5s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+        transform-origin: center center;
+        transform-origin: 50% 50%;
+    }
+
+.rotatebetter{
+    animation-name: reveal-pack;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    transform-origin: center center;
+}
+.rotate{
+    animation-name: rotate;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    transform-origin: center center;
+}
+
+.reveal-Pack{
+  animation-name: reveal-pack;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  transform-origin: center center;
+}
+
+.hidden{
+      display: none;
+}
+
+
+.bg_adj{
+  transition: opacity 0.3s;
+  opacity: 0%;
+}
+
+.hidden-opacity {
+  opacity: 100%;
+  /* transition: opacity 0.3s; */
+}
+
+
+.show{
+  display: flex;
+}
+
+.common{ background: linear-gradient(180deg, #ae7ffe 0%, #ae7ffe 100%);     border-color: rgb(211, 211, 211); }
+
+.rare{ background: linear-gradient(180deg, #7fadfe 0%, #fc466b 100%);      border-color: rgb(246, 246, 246);}
+
+.fullart{
+  border-radius: 25px;
+  border: solid transparent;
+  background-repeat: no-repeat;
+  background: transparent;
+}
+
+.legendary{
+  /* animation-name: holographic;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transform-origin: center center;
+  animation-timing-function: ease; */
+  background: linear-gradient(150deg,  #db6980 0%, #dbad69 25%, #8ed882 50%, #69dbd7 75%, #86a1cf  90%);
+  border-width: 0px;
+  box-shadow: 0 0 10px 5px #ffffff,
+  0 0 20px 7px #ebecca,
+  0 0 25px 20px #e2df2b,
+  0 0 30px 25px #ff2414;
+  /* -webkit-animation: holographic 5s ease infinite;
+  -moz-animation: holographic 5s ease infinite;
+  animation: holographic 5s ease infinite; */
+}
+
+
+@keyframes popup {
+    0%   { opacity: 0%; width: 0vw; height: 0vw;}
+    33% {rotate: -25deg;}
+    66% {rotate: 25deg;}
+    70% {opacity: 100%; width: 25%; height: 35vw;}
+    75% {opacity: 100%; width: 30%; height: 40vw;}
+    100%  {opacity: 100%; width: 25%; height: 35vw; rotate: 0deg;}
+  }
+
+  @keyframes reveal-pack {
+    0% {transform: rotate(25deg);}
+    10% {transform: rotate(-25deg);}
+    20% {transform: rotate(25deg);}
+    30% {transform: rotate(-25deg);}
+    40% {transform: rotate(25deg);}
+    50% {transform: rotate(-25deg);}
+    60% {transform: rotate(25deg);}
+    70% {transform: rotate(-25deg);}
+    80% {transform: rotate(0deg); opacity: 100%; width: 20vw; height: 30vw;}
+    100% {width: 60vw; height: 84vw; opacity: 0%;}
+  }
+  
+  @keyframes rotate {
+    0% {transform: rotate(25deg);}
+    50% {transform: rotate(-25deg);}
+    100%  {transform: rotate(0deg);}
+  }
+
+  @keyframes grow {
+    0% {transform:scale(50px); max-width: 60vmin;}
+    0% {transform:scale(100px); max-width: 70vmin;}
+  }
+
+  /* @keyframes reveal-pack {
+    0% {transform: rotate(25deg);}
+    10% {transform: rotate(-25deg);}
+    20% {transform: rotate(25deg);}
+    30% {transform: rotate(-25deg);}
+    40% {transform: rotate(25deg);}
+    50% {transform: rotate(-25deg);}
+    60% {transform: rotate(25deg);}
+    70% {transform: rotate(-25deg);}
+    80% {transform: rotate(0deg); opacity: 100%;}
+    100% {width: 60vw; height: 84vw; opacity: 0%;}
+  } */
+
+  /* @keyframes holographic {
+    0% {    background: linear-gradient(180deg,  rgb(219, 105, 128) 10%, rgb(142, 216, 130) 50%, rgb(134, 161, 207)  90%);}
+    25% {    background: linear-gradient(130deg,  rgb(219, 105, 128) 5%, rgb(142, 216, 130) 30%, rgb(134, 161, 207)  70%);}
+    50% {    background: linear-gradient(180deg,  rgb(219, 105, 128) 10%, rgb(142, 216, 130) 50%, rgb(134, 161, 207)  90%);}
+    75%  {   background: linear-gradient(230deg,  rgb(219, 105, 128) 30%, rgb(142, 216, 130) 70%, rgb(134, 161, 207)  95%);}
+    100% {    background: linear-gradient(180deg,  rgb(219, 105, 128) 10%, rgb(142, 216, 130) 50%, rgb(134, 161, 207)  90%);}
+  } */
+
+  /* @-webkit-keyframes holographic {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@-moz-keyframes holographic {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@keyframes holographic { 
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+} */
